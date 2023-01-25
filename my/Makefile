@@ -17,8 +17,12 @@ OBJ	=	$(SRC:.c=.o)
 
 NAME	=	libmy.a
 
+CC	=	gcc
+
+CFLAGS	=	-c -g -Wall -Wextra
+
 all:
-	gcc $(SRC) -c -g
+	$(CC) $(SRC) $(CFLAGS)
 	ar rc $(NAME) $(OBJ)
 
 clean:
