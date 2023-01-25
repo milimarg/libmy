@@ -12,7 +12,8 @@ SRC	=	my_put_nbr.c \
 		my_strcpy.c	\
 		my_strncpy.c	\
 		my_strncmp.c	\
-		my_strstr.c
+		my_strstr.c	\
+		my_strcmp.c
 
 OBJ	=	$(SRC:.c=.o)
 
