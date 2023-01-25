@@ -14,4 +14,5 @@ int my_getnbr(char const *str);
 char *my_strcpy(char *dest, char const *src);
 char *my_strncpy(char *dest, char const *src, int n);
 int my_strncmp(char *s1, char const *s2, int n);
+char *my_strstr(char *haystack, char const *needle);
 #endif /* !LIBMY_H_ */

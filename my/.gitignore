@@ -1,2 +1,3 @@
 *.a
 test_bin
+test.c

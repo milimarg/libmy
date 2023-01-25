@@ -11,7 +11,8 @@ SRC	=	my_put_nbr.c \
 		my_getnbr.c	\
 		my_strcpy.c	\
 		my_strncpy.c	\
-		my_strncmp.c
+		my_strncmp.c	\
+		my_strstr.c
 
 OBJ	=	$(SRC:.c=.o)
 
@@ -19,10 +20,10 @@ NAME	=	libmy.a
 
 CC	=	gcc
 
-CFLAGS	=	-c -g -Wall -Wextra
+CFLAGS	=	-g -Wall -Wextra
 
 all:
-	$(CC) $(SRC) $(CFLAGS)
+	$(CC) $(SRC) $(CFLAGS) -c
 	ar rc $(NAME) $(OBJ)
 
 clean:
@@ -34,4 +35,4 @@ fclean: clean
 re: fclean all
 
 test: re
-	gcc test.c -L. -lmy -o test_bin
+	gcc test.c -L. -lmy -o test_bin $(CFLAGS)
