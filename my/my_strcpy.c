@@ -1,8 +1,8 @@
 /*
-** EPITECH PROJECT, 2022
-** my_strcpy
+** EPITECH PROJECT, 2023
+** my
 ** File description:
-** Replaces string by another.
+** my_strcpy
 */
 
 char *my_strcpy(char *dest, char const *src)

@@ -1,8 +1,8 @@
 /*
-** EPITECH PROJECT, 2022
-** my_strstr
+** EPITECH PROJECT, 2023
+** my
 ** File description:
-** Finds string.
+** my_strstr
 */
 
 #include <stddef.h>

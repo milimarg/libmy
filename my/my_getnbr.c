@@ -1,8 +1,8 @@
 /*
-** EPITECH PROJECT, 2022
-** CPOOL_CWorkshopLib
+** EPITECH PROJECT, 2023
+** my
 ** File description:
-** my_getnbr.c
+** my_getnbr
 */
 
 int my_getnbr(char const *str)

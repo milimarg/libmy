@@ -2,15 +2,16 @@
 ** EPITECH PROJECT, 2023
 ** my
 ** File description:
-** my_strcat
+** my_strncat
 */
 
 #include "libmy.h"
 
-char *my_strcat(char *dest, char const *src)
+char *my_strncat(char *dest, char const *src, int n)
 {
     char *cat_start = dest + my_strlen(dest);
 
-    while ((*cat_start++ = *src++));
+    for (int i = 0; i < n; i++)
+        *cat_start++ = *src++;
     return (dest);
 }

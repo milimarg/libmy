@@ -17,4 +17,5 @@ int my_strncmp(char *s1, char const *s2, int n);
 char *my_strstr(char *haystack, char const *needle);
 int my_strcmp(const char *s1, const char *s2);
 char *my_strcat(char *dest, char const *src);
+char *my_strncat(char *dest, char const *src, int n);
 #endif /* !LIBMY_H_ */

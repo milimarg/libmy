@@ -1,8 +1,8 @@
 /*
-** EPITECH PROJECT, 2022
-** my_strncpy
+** EPITECH PROJECT, 2023
+** my
 ** File description:
-** Replaces string by another of lenght 'n'.
+** my_strncpy
 */
 
 char *my_strncpy(char *dest, char const *src, int n)

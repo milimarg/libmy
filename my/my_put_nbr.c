@@ -1,8 +1,8 @@
 /*
-** EPITECH PROJECT, 2022
-** CPOOL_CWorkshopLib
+** EPITECH PROJECT, 2023
+** my
 ** File description:
-** my_put_nbr.c
+** my_put_nbr
 */
 
 #include <unistd.h>

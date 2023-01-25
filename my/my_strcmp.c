@@ -1,8 +1,8 @@
 /*
-** EPITECH PROJECT, 2022
-** MyHunter
+** EPITECH PROJECT, 2023
+** my
 ** File description:
-** my_strcmp.c
+** my_strcmp
 */
 
 #include "libmy.h"
