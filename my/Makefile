@@ -15,7 +15,12 @@ SRC	=	my_put_nbr.c \
 		my_strstr.c	\
 		my_strcmp.c	\
 		my_strcat.c	\
-		my_strncat.c
+		my_strncat.c \
+		my_str_to_word_array.c \
+		my_str_to_word_array_separator.c \
+		my_strdup.c \
+		my_strndup.c \
+		my_char_isalphanum.c
 
 OBJ	=	$(SRC:.c=.o)
 
