@@ -7,7 +7,12 @@
 
 #ifndef LIBMY_H_
     #define LIBMY_H_
-    #define my_char_isalpha(c) (c >= 33 && c <= 126)
+    #define char_isvisible(c) (c >= ' ' && c <= '~')
+    #define char_isalpha(c) ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+    #define char_isnum(c) (c >= '0' && c <= '9')
+    #define char_isalphanum(c) (char_isalpha(c) || char_isnum(c))
+    #include <stddef.h>
+
 // @brief Display a number
 // @param nb number to display
 int my_put_nbr(int nb);
@@ -87,7 +92,10 @@ char *my_strdup(char const *src);
 // @param n number of characters to copy
 char *my_strndup(char const *src, int n);
 
-// @brief Check if a character is part of the alphabet, or is a number
-// @param c character to check
-int my_char_isalphanum(char c);
+// @brief Fill n bytes of byte c in memory area s
+// @param s memory area to fill
+// @param c constant byte to store
+// @param n number of bytes to fill
+char *my_char_memset(char *s, int c, size_t n);
+
 #endif /* !LIBMY_H_ */

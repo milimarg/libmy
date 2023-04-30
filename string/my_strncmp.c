@@ -5,7 +5,7 @@
 ** my_strncmp
 */
 
-#include "libmy.h"
+#include "../my.h"
 
 int my_strncmp(char *s1, char const *s2, int n)
 {

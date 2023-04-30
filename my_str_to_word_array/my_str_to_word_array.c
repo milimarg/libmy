@@ -6,7 +6,7 @@
 */
 
 #include <stdlib.h>
-#include "libmy.h"
+#include "../my.h"
 
 int *count_words_len(char const *str, int words_nb)
 {
@@ -16,10 +16,9 @@ int *count_words_len(char const *str, int words_nb)
     int *full_len = malloc(sizeof(int) * words_nb);
 
     while (str[i] != '\0') {
-        if (my_char_isalpha(str[i]) && !my_char_isalpha(str[i + 1])) {
-            full_len[k] = i - next_index + 1;
+        if (char_isalpha(str[i]) && !char_isalpha(str[i + 1])) {
+            full_len[k++] = i - next_index + 1;
             next_index = i + 2;
-            k++;
         }
         i++;
     }
@@ -32,8 +31,8 @@ char *word_saver(int i, int j, const char *str, int current_word_len)
     char *word = malloc(sizeof(char) * (current_word_len + 1));
 
     while (j <= i) {
-        word[k] = (my_char_isalpha(str[j])) ? str[j] : '\0';
-        k += (my_char_isalpha(str[j]));
+        word[k] = (char_isalpha(str[j])) ? str[j] : '\0';
+        k += (char_isalpha(str[j]));
         j++;
     }
     word[k] = '\0';
@@ -50,7 +49,7 @@ char **divide_array(char const *str, int words_nb)
     int l = 0;
 
     for (int i = 0; str[i] != '\0'; i++) {
-        if (my_char_isalpha(str[i]) && !my_char_isalpha(str[i + 1])) {
+        if (char_isalpha(str[i]) && !char_isalpha(str[i + 1])) {
             current_word_len = words_len[l];
             word = word_saver(i, j, str, current_word_len);
             j = i + 2;
@@ -64,20 +63,13 @@ char **divide_array(char const *str, int words_nb)
 
 char **my_str_to_word_array(char const *str)
 {
+    int len = my_strlen(str);
     int words_nb = 0;
-    char **result;
+    char **result = NULL;
 
-    for (int i = 0; str[i] != '\0'; i++)
-        if (my_char_isalpha(str[i]) && !my_char_isalpha(str[i + 1]))
+    for (int i = 0; i < len; i++)
+        if (char_isalpha(str[i]) && !char_isalpha(str[i + 1]))
             words_nb++;
     result = divide_array(str, words_nb);
     return (result);
-}
-
-int destroy_my_str_to_word_array(char **str)
-{
-    for (int i = 0; str[i] != NULL; i++)
-        free(str[i]);
-    free(str);
-    return (0);
 }

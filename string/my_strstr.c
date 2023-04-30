@@ -5,8 +5,7 @@
 ** my_strstr
 */
 
-#include <stddef.h>
-#include "libmy.h"
+#include "../my.h"
 
 char *my_strstr(char *haystack, char const *needle)
 {

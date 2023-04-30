@@ -6,7 +6,7 @@
 */
 
 #include <stdlib.h>
-#include "libmy.h"
+#include "../my.h"
 
 int *count_words_len_separator(char const *str, int words_nb, char separator)
 {
@@ -65,12 +65,20 @@ char **divide_array_separator(char const *str, int words_nb, char separator)
 
 char **my_str_to_word_array_separator(char const *str, char separator)
 {
+    int len = my_strlen(str);
     int words_nb = 0;
-    char **result;
+    int i = 0;
+    char *new_str = malloc(sizeof(char) * (len + 2));
+    char **result = NULL;
 
-    for (int i = 0; str[i] != '\0'; i++)
-        if (str[i] != separator && str[i + 1] == separator)
+    for (i = 0; i < len; i++)
+        new_str[i] = str[i];
+    new_str[i++] = separator;
+    new_str[i++] = 0;
+    for (i = 0; i < len; i++)
+        if (char_isalpha(new_str[i]) && !char_isalphanum(new_str[i + 1]))
             words_nb++;
-    result = divide_array_separator(str, words_nb, separator);
+    result = divide_array_separator(new_str, words_nb, separator);
+    free(new_str);
     return (result);
 }
