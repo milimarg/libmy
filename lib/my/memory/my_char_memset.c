@@ -5,7 +5,7 @@
 ** my_char_memset.c
 */
 
-#include "../my.h"
+#include "../../my.h"
 
 char *my_char_memset(char *s, int c, size_t n)
 {

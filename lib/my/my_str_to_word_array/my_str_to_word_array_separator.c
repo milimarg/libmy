@@ -6,7 +6,7 @@
 */
 
 #include <stdlib.h>
-#include "../my.h"
+#include "../../my.h"
 
 int *count_words_len_separator(char const *str, int words_nb, char separator)
 {
