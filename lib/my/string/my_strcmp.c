@@ -1,11 +1,11 @@
 /*
 ** EPITECH PROJECT, 2023
-** my
+** libmy
 ** File description:
-** my_strcmp
+** my_strcmp.c
 */
 
-#include "../my.h"
+#include "../../../include/my.h"
 
 int my_strcmp(const char *s1, const char *s2)
 {

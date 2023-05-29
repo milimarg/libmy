@@ -1,26 +1,21 @@
 /*
-** EPITECH PROJECT, 2022
-** CPOOL_Day08
+** EPITECH PROJECT, 2023
+** libmy
 ** File description:
 ** my_strdup.c
 */
 
 #include <stdlib.h>
-
-int my_strlen(char const *str);
+#include "../../../include/my.h"
 
 char *my_strdup(char const *src)
 {
-    int len = 0;
-    char *dest = NULL;
+    int len = my_strlen(src);
+    char *dest = malloc(sizeof(char) * (len + 1));
     int i = 0;
 
-    len = my_strlen(src);
-    dest = malloc(sizeof(char) * (len + 1));
-    while (src[i] != '\0') {
+    for (; src[i] != '\0'; i++)
         dest[i] = src[i];
-        i++;
-    }
     dest[i] = '\0';
     return dest;
 }

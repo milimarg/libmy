@@ -1,11 +1,11 @@
 /*
 ** EPITECH PROJECT, 2023
-** my
+** libmy
 ** File description:
-** my_strstr
+** my_strstr.c
 */
 
-#include "../my.h"
+#include "../../../include/my.h"
 
 char *my_strstr(char *haystack, char const *needle)
 {

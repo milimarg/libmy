@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2023
-** my
+** libmy
 ** File description:
-** my_strcpy
+** my_strcpy.c
 */
 
 char *my_strcpy(char *dest, char const *src)

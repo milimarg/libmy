@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2023
-** lib
+** libmy
 ** File description:
 ** destroy_my_str_to_word_array.c
 */

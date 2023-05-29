@@ -1,11 +1,11 @@
 /*
 ** EPITECH PROJECT, 2023
-** my
+** libmy
 ** File description:
 ** my_char_memset.c
 */
 
-#include "../../my.h"
+#include "../../../include/my.h"
 
 char *my_char_memset(char *s, int c, size_t n)
 {

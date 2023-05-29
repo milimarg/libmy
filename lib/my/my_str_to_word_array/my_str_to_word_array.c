@@ -1,14 +1,14 @@
 /*
-** EPITECH PROJECT, 2022
-** CPOOL_CWorkshopLib
+** EPITECH PROJECT, 2023
+** libmy
 ** File description:
 ** my_str_to_word_array.c
 */
 
 #include <stdlib.h>
-#include "../../my.h"
+#include "../../../include/my.h"
 
-int *count_words_len(char const *str, int words_nb)
+static int *count_words_len(char const *str, int words_nb)
 {
     int i = 0;
     int k = 0;
@@ -25,7 +25,7 @@ int *count_words_len(char const *str, int words_nb)
     return (full_len);
 }
 
-char *word_saver(int i, int j, const char *str, int current_word_len)
+static char *word_saver(int i, int j, const char *str, int current_word_len)
 {
     int k = 0;
     char *word = malloc(sizeof(char) * (current_word_len + 1));
@@ -39,7 +39,7 @@ char *word_saver(int i, int j, const char *str, int current_word_len)
     return (word);
 }
 
-char **divide_array(char const *str, int words_nb)
+static char **divide_array(char const *str, int words_nb)
 {
     char **result = malloc(sizeof(char *) * (words_nb + 1));
     char *word = NULL;

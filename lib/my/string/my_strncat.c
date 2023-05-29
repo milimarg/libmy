@@ -1,11 +1,11 @@
 /*
 ** EPITECH PROJECT, 2023
-** my
+** libmy
 ** File description:
-** my_strncat
+** my_strncat.c
 */
 
-#include "../my.h"
+#include "../../../include/my.h"
 
 char *my_strncat(char *dest, char const *src, int n)
 {

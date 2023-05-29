@@ -1,14 +1,15 @@
 /*
-** EPITECH PROJECT, 2022
-** CPOOL_CWorkshopLib
+** EPITECH PROJECT, 2023
+** libmy
 ** File description:
-** my_str_to_word_array.c
+** my_str_to_word_array_separator.c
 */
 
 #include <stdlib.h>
-#include "../../my.h"
+#include "../../../include/my.h"
 
-int *count_words_len_separator(char const *str, int words_nb, char separator)
+static int *count_words_len_separator(char const *str, int words_nb,
+char separator)
 {
     int i = 0;
     int k = 0;
@@ -26,8 +27,8 @@ int *count_words_len_separator(char const *str, int words_nb, char separator)
     return (full_len);
 }
 
-char *word_saver_separator(int idxs[], const char *str, int current_word_len,
-char separator)
+static char *word_saver_separator(int idxs[], const char *str,
+int current_word_len, char separator)
 {
     int k = 0;
     char *word = malloc(sizeof(char) * (current_word_len + 1));
@@ -41,7 +42,8 @@ char separator)
     return (word);
 }
 
-char **divide_array_separator(char const *str, int words_nb, char separator)
+static char **divide_array_separator(char const *str, int words_nb,
+char separator)
 {
     char **result = malloc(sizeof(char *) * (words_nb + 1));
     char *word = NULL;

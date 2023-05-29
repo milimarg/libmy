@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2023
-** my
+** libmy
 ** File description:
-** my_strlen
+** my_strlen.c
 */
 
 int my_strlen(char const *str)
