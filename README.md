@@ -11,5 +11,5 @@ make
 ## Usage
 
 ```c
-gcc <your files> -L<path to my_libc directory>/lib/my -lmy
+gcc <your files> -L<path to libmy directory>/lib/my -lmy
 ```
